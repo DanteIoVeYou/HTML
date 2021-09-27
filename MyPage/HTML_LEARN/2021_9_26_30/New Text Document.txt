@@ -1,0 +1,21 @@
+<table>
+<tr><th></th></tr>
+<tr><td></td></tr>
+</table>
+
+5 property of table
+{
+	align: center left right
+	border: "1" or ""
+	cellpadding
+	cellspacing
+	height
+}
+
+
+<thead></thead>
+<tbody></tbody>
+
+
+colspan="x"
+rowspan="x"

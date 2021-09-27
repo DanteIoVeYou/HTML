@@ -1,0 +1,20 @@
+keyword
+
+<!DOCTYPE html> 
+<html lang="en"></html>
+<meta charset = "UTF-8">
+
+
+<h1>~<h6>
+<p></p>
+<br/>
+
+<strong></strong> == <b></b>
+<em></em> == <i></i>
+<del></del> == <s></s>
+<ins></ins> == <u></u>
+
+<div></div>
+<span></span>
+
+<img src="url" alt="" title="" width="" height="" border=""/>

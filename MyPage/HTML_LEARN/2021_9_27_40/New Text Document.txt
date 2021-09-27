@@ -1,0 +1,66 @@
+<--ul里面只能放li-->
+<--li里面可以放任意标签-->
+<ul>
+<li></li>
+<li></li>
+</ul>
+
+<ol>
+<li></li>
+<li></li>
+</ol>
+
+<dl>
+<dt></dt>
+<dd></dd>
+<dd></dd>
+<dl>
+
+
+表单域
+表单控件(表单元素)
+提示信息
+
+<form action="提交到哪个页面" method="get" name=""></form>
+
+表单控件（表单元素）
+
+1.input表单元素
+属性
+<1>type
+
+text
+password
+radio
+checkbox
+submit
+reset
+button(JS)
+file
+hidden			
+<input type="text" name="" value="">文本框，看得见
+<input type="password" name="">密码框，看不见
+<input type="radio" name="">
+<input type="checkbox" name="">复选框
+<input type="submit" value="">value值代表提交按钮上显示的字，默认是提交
+<input type="reset">
+
+
+<2>name
+单选按钮必须有相同的名字
+
+<3>value
+只在type="text"时能看到效果
+<4>checked
+checked="checked"
+<5>maxlength
+maxlength="6"
+<6>
+
+2.select表单元素
+<select>
+	<option></option>
+	<option selected="selected"></option>
+</select>
+
+3.textarea
