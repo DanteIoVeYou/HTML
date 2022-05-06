@@ -1,0 +1,49 @@
+div p {
+    color: red;
+}
+
+div h1 {
+    color: peru;
+}
+
+.hello {
+    color: green;
+}
+
+.box-green {
+    width: 300px;
+    height: 200px;
+    background-color: green;
+}
+
+.box-red {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+}
+
+#pink {
+    color: pink;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+
+    color: #29D794;
+    text-align: center;
+    text-decoration: overline;
+    text-indent: 2em;
+    line-height: 26px;
+    /* 上间距+文本高度+下间距 */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: normal 700 242px 'Microsoft yahei'
+}
