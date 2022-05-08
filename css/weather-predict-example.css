@@ -1,0 +1,36 @@
+.gray {
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
+
+.search {
+    color: #666666;
+    width: 170px;
+}
+
+.pic {
+    text-align: center;
+}
+
+.btn {
+    font-weight: 700;
+}
+
+.footer {
+    color: gray;
+    font-size: 12px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font: 16px/28px 'Microsoft yahei';
+    text-indent: 2em;
+}

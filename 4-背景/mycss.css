@@ -1,0 +1,8 @@
+div {
+    width: 1500px;
+    height: 1500px;
+    background-color: pink;
+    background-image: url(https://img.pconline.com.cn/images/product/1277/1277627/z.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}

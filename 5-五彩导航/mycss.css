@@ -1,0 +1,59 @@
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    width: 120px;
+    height: 58px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+.nav .box1 {
+    background-image: url("images/bg1.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box2 {
+    background-image: url("images/bg2.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box3 {
+    background-image: url("images/bg3.jpg");
+    background-repeat: no-repeat;
+}
+
+.nav .box4 {
+    background-image: url("images/bg4.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box5 {
+    background-image: url("images/bg5.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box1:hover {
+    background-image: url("images/bg11.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box2:hover {
+    background-image: url("images/bg22.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box3:hover {
+    background-image: url("images/bg33.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box4:hover {
+    background-image: url("images/bg44.png");
+    background-repeat: no-repeat;
+}
+
+.nav .box5:hover {
+    background-image: url("images/bg55.png");
+    background-repeat: no-repeat;
+}
