@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="parent"> -->
+        <!-- <div class="child">1</div> -->
+        <!-- <div class="child">2</div> -->
+        <!-- <div class="child">3</div> -->
+        <!-- <input type="button" value="按钮"> -->
+    <!-- </div> -->
+    <!-- <div class="parent1"> -->
+        <!-- 111 -->
+    <!-- </div> -->
+    <!-- <p>hello</p> -->
+    <!-- <button>点击按钮，改变文本</button> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent {
+            height: 400px;
+            width: 500px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+        .screen {
+            height: 200px;
+            width: 500px;
+            text-align: center;
+            font-size: 100px;
+            line-height: 200px;
+            color: white;
+        }
+        .parent .btn {
+            height: 100px;
+            width: 200px;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .parent .btn button {
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+        .parent .btn button:active {
+            background-color: green;
+            color: black;
+        }
+        
+    </style>
+    <div class="parent">
+        <div class="screen">0</div>
+        <div class="btn">
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+        </div>
+    </div>
+    <script>
+        // let btn = document.querySelector("input");
+        // btn.onclick = function() {
+            // alert("hello");
+        // }
+        // let elem = document.querySelector('.parent1');
+        // console.log(elem.innerHTML);
+        // let btn = document.querySelector('button');
+        // btn.onclick = function() {
+            // let elem = document.querySelector('p');
+            // elem.innerHTML = '<input type"text">';
+        // }
+        let pulsBtn = document.querySelector('#plus');
+        let minusBtn = document.querySelector('#minus');
+        pulsBtn.onclick = function() {
+            let content = document.querySelector('.screen');
+            let num = parseInt(content.innerHTML);
+            num += 1;
+            content.innerHTML = num;
+        }
+        minusBtn.onclick = function() {
+            let content = document.querySelector('.screen');
+            let num = parseInt(content.innerHTML);
+            num -= 1;
+            content.innerHTML = num;
+        }
+    </script>
+</body>
+</html>
