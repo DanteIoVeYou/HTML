@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" class="animals">dog<br>
+    <input type="checkbox" class="animals">cat<br>
+    <input type="checkbox" class="animals">fish<br>
+    <input type="checkbox" class="animals">bird<br>
+    <input type="checkbox" class="all">all
+    <script>
+        let animals = document.querySelectorAll('.animals');
+        let all = document.querySelector('.all');
+        all.onclick = function() {
+            for(let i = 0; i < animals.length; i++) {
+                animals[i].checked = all.checked
+            }
+        }
+        for(let j = 0; j < animals.length; j++) {
+            animals[j].onclick = function() {
+                for(let i = 0; i < animals.length; i++) {
+                    if(!animals[i].checked) {
+                        all.checked = false;
+                        break;
+                    }
+                    if(i == animals.length - 1) {
+                        all.checked = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

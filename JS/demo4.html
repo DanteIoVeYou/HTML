@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+        .light {
+            background-color: #fcfcfc;
+            color: #020202;
+        }
+        .dark {
+            background-color: #020202;
+            color: #fcfcfc;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container light">
+        <p>helloworld</p>
+        <p>helloworld</p>
+        <p>helloworld</p>
+    </div>
+    <script>
+        let div = document.querySelector('div');
+            div.onclick = function() {
+                if(div.className.indexOf('light') != -1) {
+                    div.className = 'container dark';
+                }
+                else {
+                    div.className = 'container light';
+                }
+            }
+    </script>
+</body>
+
+</html>
