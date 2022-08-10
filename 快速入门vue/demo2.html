@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加减法</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <div id="app">
+        <button v-on:click="add">+</button>
+        <span>{{ num }}</span>
+        <button v-on:click="sub">-</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                num: 1
+            },
+            methods: {
+                add: function () {
+                    if (this.num < 10) {
+                        this.num++;
+                    }
+                    else {
+                        alert("太大了！");
+                    }
+                },
+                sub: function () {
+                    if (this.num > 0) {
+                        this.num--;
+                    }
+                    else {
+                        alert("太小了！");
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
