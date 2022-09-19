@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div class="search" id="search">
+        <div class="intro" id="intro">{{intro}}</div>
+        <div class="search">
+            <div class="search_area">
+                <input type="text" class="searchtext" id="searchtext" @keyup.enter="searchWeather" placeholder="请输入城市"
+                    v-model="city">
+                <input type="button" class="searchbutton" value="search" @click="searchWeather">
+            </div>
+            <div class="search_result">
+                <ul>
+                    <li v-for="item in weatherList">
+                        <div class="info_type">{{ item.type }}<span class="iconfont"></span></div>
+                        <div class="info_temp">
+                            <b>{{ item.high }}</b>
+                            <b>{{ item.low }}</b>
+                        </div>
+                        <div class="info_date">{{ item.date }}</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hotcitys">
+                <a href="#" class="hotcity" @click="changeCity('上海')">上海</a>
+                <a href="#" class="hotcity" @click="changeCity('深圳')">深圳</a>
+                <a href="#" class="hotcity" @click="changeCity('西安')">西安</a>
+                <a href="#" class="hotcity" @click="changeCity('苏州')">苏州</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let app = new Vue({
+            el: "#search",
+            data: {
+                intro: "天气预报",
+                city: "",
+                weatherList: []
+            },
+            methods: {
+                searchWeather: function () {
+                    let that = this;
+                    console.log("天气预报");
+                    axios.get('http://wthrcdn.etouch.cn/weather_mini?city=' + this.city)
+                        .then(res => {
+                            console.log(res.data.data.forecast);
+                            this.weatherList = res.data.data.forecast;
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            alert('查询失败！');
+                        })
+                },
+
+                changeCity: function (city) {
+                    let that = this;
+                    this.city = city;
+                    axios.get('http://wthrcdn.etouch.cn/weather_mini?city=' + city).then(
+                        function (resp) {
+                            that.weatherList = resp.data.data.forecast;
+                        },
+                        function (err) {
+                            console.log(err);
+                        }
+                    )
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
