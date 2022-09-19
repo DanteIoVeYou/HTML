@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="get" value="get">
+    <input type="button" id="post" value="post">
+    <div id="app">
+        <input type="button" id="getjoke" value="getjoke" @click="getJoke">
+        <p>{{joke}}</p>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        $('#get').click(function() {
+            axios.get("https://autumnfish.cn/api/joke/list12?num=3").then(function (resp) {
+                console.log(resp);
+            }, function(err) {
+                console.log(err);
+            });
+        });
+
+        let app = new Vue({
+            el:"#app",
+            data:{
+                joke:"这是一个笑话"
+            },
+            methods:{
+                getJoke:function(){
+                    let that = this;
+                    axios.get("https://autumnfish.cn/api/joke").then
+                    (function (resp){
+                        console.log(resp);
+                        that.joke = resp.data;
+                    },function (err) {
+                    });
+                }
+            }
+        })
+    </script>
+</body>
+</html>
